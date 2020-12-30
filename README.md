@@ -1,1 +1,1 @@
-# qa-platform
+# Q&A Platform

@@ -6,13 +6,6 @@ from appdir.models import User, Question, Answer, Viewpoint, Comment, Follow, In
 from datetime import datetime
 
 
-# @app.before_request
-# def before_request():
-#     if request.url.startswith('http://'):
-#         url = request.url.replace('http://', 'https://', 1)
-#         return redirect(url, code=301)
-
-
 @app.route('/', methods=['GET', 'POST'])
 def root():
     question_form = QuestionForm()

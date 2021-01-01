@@ -42,6 +42,27 @@
             height: 200px;
         }
 
+        #beian:link {
+            color: #8a8a8a;
+        }
+
+        #beian:visited {
+            color: #8a8a8a;
+        }
+
+        #beian:hover {
+            color: #1E90FF;
+        }
+
+        #beian {
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        label:hover{
+            cursor: text;
+        }
+
     </style>
     <script>
 
@@ -120,8 +141,10 @@
         </ul>
         <div class="form-inline my-2 my-lg-0 navbar-collapse" id="search">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-{#            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>#}
-            <button class="btn btn-outline-primary my-2 my-sm-0" onclick="myAlert('Due to limited time, the search function has not been completed')">Search</button>
+            {#            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>#}
+            <button class="btn btn-outline-primary my-2 my-sm-0"
+                    onclick="myAlert('Due to limited time, the search function has not been completed')">Search
+            </button>
         </div>
 
         {% if username %}
@@ -133,7 +156,8 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h4 class="modal-title">Edit your question</h4>
-                            <button type="button" class="close" data-dismiss="modal" style="outline: none">&times;</button>
+                            <button type="button" class="close" data-dismiss="modal" style="outline: none">&times;
+                            </button>
                         </div>
                         <div class="modal-body">
                             <form action="" method="post" novalidate>
@@ -204,7 +228,8 @@
                     <div class="absolute-center alert alert-primary alert-dismissible fade show alert-margin"
                          role="alert" style="z-index: 9999">
                         <strong>All goes well &nbsp;</strong>{{ message }}
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="outline: none">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"
+                                style="outline: none">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -212,7 +237,8 @@
                     <div class="absolute-center alert alert-danger alert-dismissible fade show alert-margin"
                          role="alert" style="z-index: 9999">
                         <strong>There's a problem &nbsp;</strong>{{ message }}
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="outline: none">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"
+                                style="outline: none">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -237,5 +263,12 @@
 </div>
 
 {% block content %}{% endblock %}
+
+<div class="text-center" style="margin-top: 200px">
+    <label style="font-size: 12px;color: red">本网站仅供个人学习, 不涉及任何商业利益!</label><br>
+    <label style="font-size: 12px;color: #8a8a8a">互联网ICP备案: </label>
+    <a href="https://beian.miit.gov.cn/" id="beian" target="_blank">京ICP备2020043107号</a>
+</div>
+
 </body>
 </html>
